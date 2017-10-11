@@ -1,0 +1,15 @@
+1. What’s stdint.h?
+The C99 standard includes definition of the following new integer types:
+  - Exact-width integer types which are guaranteed to have the same number N of bits across all implementations.
+  - Least-width integer types which are guaranteed to be the smallest type available in the implementation, that has at least specified 
+  number N of bits. Guaranteed to be specified for at least N=8,16,32,64.
+  - Fastest integer types which are guaranteed to be the fastest integer type available in the implementation, that has at least specified 
+  number N of bits. Guaranteed to be specified for at least N=8,16,32,64.
+  - Pointer integer types which are guaranteed to be able to hold a pointer. Included only if it is available in the implementation.
+  - Maximum-width integer types which are guaranteed to be the largest integer type in the implementation.
+
+2. What’s the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program?
+uint8_t:   exact-width unsigned 8-bit integer ranging from 0 to 255;
+uint32_t:  exact-width unsigned 32-bit integer ranging from 0 to 2^32 - 1;
+int32_T:   exact-width signed 32-bit integer ranging from -2^31 to 2^31 - 1;
+uint16_t:  exact-width unsigned 16-bit integer ranging frm 0 to 2^16 - 1
